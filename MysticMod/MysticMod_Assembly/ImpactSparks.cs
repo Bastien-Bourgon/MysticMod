@@ -17,7 +17,7 @@ namespace MysticFix
         public ModTexture Sparktex = ModResource.GetTexture("sparkglow");
         public ParticleSystem Sparks;
         public static ParticleSystem.EmitParams emitParams = default(ParticleSystem.EmitParams);
-        public int hugehitcount = 35;
+        public int hugehitcount = 25;
         public int cooldown = 0;
         public int colskip = 1;
         public int flip = 0;
@@ -108,7 +108,7 @@ namespace MysticFix
                             {
                                 if (cooldown==0)
                                 {
-                                    if (collisionInfo.impulse.sqrMagnitude <= 90000f)
+                                    if (collisionInfo.impulse.sqrMagnitude <= 110000f)
                                     {
                                         this.Angle = gameObject.transform.eulerAngles;
                                         this.contact = collisionInfo.contacts[0];
@@ -142,7 +142,7 @@ namespace MysticFix
                                 }
                                 else
                                 {
-                                    if(cooldown<10)
+                                    if(cooldown<20)
                                     {
                                         cooldown++;
                                     }

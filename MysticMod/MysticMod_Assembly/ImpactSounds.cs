@@ -40,7 +40,7 @@ namespace MysticFix
 				this.Hitsound.spatialBlend = 1f;
 				this.Hitsound.maxDistance = 400f;
 				this.Hitsound.rolloffMode = AudioRolloffMode.Linear;
-				this.Hitsound.volume = 0.3f;
+				this.Hitsound.volume = 0.15f;
 				this.Hitsound.playOnAwake = false;
 				this.Hitsound.loop = false;
 				this.SmallHitsound = this.BB.gameObject.AddComponent<AudioSource>();
@@ -87,7 +87,7 @@ namespace MysticFix
                             {
                                 if (cooldown==0)
                                 {
-                                    if (collisionInfo.impulse.sqrMagnitude <= 90000f)
+                                    if (collisionInfo.impulse.sqrMagnitude <= 110000f)
                                     {
                                         playImpactSound(true);
                                         if (!StatMaster.isClient || StatMaster.isLocalSim)
@@ -106,7 +106,7 @@ namespace MysticFix
                                 }
                                 else
                                 {
-                                    if(cooldown<10)
+                                    if(cooldown<20)
                                     {
                                         cooldown++;
                                     }
