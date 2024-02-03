@@ -483,7 +483,7 @@ namespace MysticFix
 			OptionsMaster.BesiegeConfig.MorePrecisePhysics = false;
 			StatMaster.Rules.DisableFire = true;
 			
-			Console.Log("Loaded TE-BBMod Version 1.0.6");
+			Console.Log("MysticMod Online");
 		}
 
 		public void SetupNetworking()
